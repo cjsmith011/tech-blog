@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "node": "^17.5.0",
+    "sequelize": "^6.17.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+    
+  },
+  "name": "tech-blog",
+  "description": "AS A developer who writes about tech I WANT a CMS-style blog site SO THAT I can publish articles, blog posts, and my thoughts and opinions",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjsmith011/tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjsmith011/tech-blog/issues"
+  },
+  "homepage": "https://github.com/cjsmith011/tech-blog#readme"
+}
