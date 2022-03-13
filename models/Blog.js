@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const { truncate } = require('./Creator');
 
+class Blog extends Model {}
 
 Blog.init(
 {

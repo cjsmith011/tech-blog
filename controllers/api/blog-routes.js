@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         'id', 
         'title', 
         'content', 
-        'creator_name',
+        'creator_id',
         'created_at',
       ],
       //this determines the sort/order in which posts will appear
@@ -26,10 +26,10 @@ router.get('/', (req, res) => {
             attributes: ['creator_name']
           }
         },
-          {
-              model: Creator,
-              attributes: ['creator_name']
-          }
+          // {
+          //     model: Creator,
+          //     attributes: ['creator_id']
+          // }
       ]
     })
     .then(dbBlogData => res.json(dbBlogData))
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
         'id', 
         'title', 
         'content',
-        'creator_name',
+        'creator_id',
         'created_at', 
      ],
     include: [
@@ -57,13 +57,13 @@ router.get('/', (req, res) => {
         attributes: ['id', 'comment_text', 'creator_id', 'created_at'],
         include: {
           model: Creator,
-          attributes: ['creator_name']
+          attributes: ['creator_id']
         }
       },
-        {
-          model: Creator,
-          attributes: ['creator_name']
-        }
+        // {
+        //   model: Creator,
+        //   attributes: ['creator_id']
+        // }
       ]
     })
       .then(dbBlogData => {
@@ -85,7 +85,7 @@ router.get('/', (req, res) => {
     Blog.create({
       title: req.body.title,
       content: req.body.content,
-      creator_name: req.body.creator_name
+      creator_id: req.body.creator_id
     })
       .then(dbBlogData => res.json(dbBlogData))
       .catch(err => {

@@ -22,7 +22,7 @@ Creator.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-        password: {
+      password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
