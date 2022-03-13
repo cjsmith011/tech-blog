@@ -3,7 +3,7 @@ const { Blog, Creator } = require('../../models');
 const sequelize = require('../../config/connection')
 
 
-// get all users
+
 router.get('/', (req, res) => {
     Blog.findAll({
       

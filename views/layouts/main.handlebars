@@ -6,25 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Tech Blog</title>
   <!--<link rel="stylesheet" type="text/css" href="/css/jass.css">-->
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Tech Blog</h1>
-  </header>
+ 
   <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    <button id="logout" class="button">Logout</button>
     {{else}}
-    <a href="/login">Login</a>
+    <a href="/public/js/login.js">Login</a>
     {{/if}}
-    <a href="/dashboard">Dashboard</a>
-    <a href="/logout">Logout</a>
+       <a href="/public/js/logout.js">Logout</a>
   </nav>
   <main>
-    <h1 class="btn">The Tech Blog</h1>
+    <h1 class="tech-button">The Tech Blog</h1>
     {{body}}
   </main>
   {{#if loggedIn}}
